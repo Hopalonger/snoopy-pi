@@ -103,6 +103,8 @@ sudo apt-get -y install ethtool
     sudo make install
     cd ..
    rm -rf aircrack-ng-1.2-beta1*
+    sudo airodump-ng-oui-update
+
 fi
 
 echo "[+] Creating symlinks to this folder for snoopy.py."
