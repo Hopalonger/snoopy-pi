@@ -224,18 +224,18 @@ Otherwise, the plugin can do whatever you like.
 
 Hardware
 ---------
-Snoopy will run on any Linux device with sufficient support to install files from the *install.sh* file. i.e. Python, and related packages. Hardware support will vary for what plugins are required, but for the most common scenario of collecting WiFi data and uploading via 3G, the following is recommended:
+Snoopy will run on any Linux device with sufficient support to install files from the *install.sh* file. i.e. Python, and related packages. Hardware support will vary for what plugins are required, but for the most common scenario of collecting WiFi data and uploading via 3G or seperate wifi Newtwork, the following is recommended:
 
-* BeagleBone Black
-* Powered USB hub (with Y splitter to save on two plugs)
-* Alfa AWUS036h WiFi adapter
-* Huawei E160 Modem
-* BlueNext BN903S GPS
-* At least a 2A power adapter (will vary on what peripherals you have)
+1. Aircrack-ng Monitor Mode Capable USB Wifi Card
+2. Raspberry PI Zero W
+3. 2 Amp Power Supply
+4. Powered USB Hub
+5. Verizon USB760 3G Prepaid USB Broadband Device
+
 
 Operating System
 ----------------
-Kali 1.05 and Ubuntu 12.04 have been tested. Similar systems should work.
+November 2017 Raspbian, Kali 2017.3 and Ubuntu 16.04.3 have been tested. Similar systems should work.
 
 Extra Notes:
 ------------
