@@ -84,8 +84,13 @@ pip install ./setup/scapy-latest-snoopy_patch.tar.gz
 read -r -p  "[ ] Do you want to download, compile, and install aircrack? (Do NOT install on Server) [Y/n] " response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-    sudo apt-get install libssl1.0-dev
+    
     echo "[+] Downloading aircrack-ng..."
+ sudo apt-get -y install libnl1
+sudo apt-get -y install libnl-dev
+sudo apt-get -y install libnl-3-dev
+sudo apt-get -y install libnl-genl-3-dev
+sudo apt-get -y install libssl-dev
     wget http://download.aircrack-ng.org/aircrack-ng-1.2-beta1.tar.gz
     tar xzf aircrack-ng-1.2-beta1.tar.gz
     cd aircrack-ng-1.2-beta1
