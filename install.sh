@@ -41,18 +41,29 @@ apt-get install --force-yes --yes python-setuptools autossh python-psutil python
 easy_install pip
 easy_install smspdu
 
+echo "[+] Installing Python Packages 1/9"
 pip install sqlalchemy==0.7.4
+echo "[+] Installing Python Packages 2/9"
 pip uninstall requests -y
+echo "[+] Installing Python Packages 3/9"
 pip install -Iv https://pypi.python.org/packages/source/r/requests/requests-0.14.2.tar.gz   #Wigle API built on old version
+echo "[+] Installing Python Packages 4/9"
 pip install httplib2
+echo "[+] Installing Python Packages 5/9"
+
 pip install BeautifulSoup
+echo "[+] Installing Python Packages 6/9"
 pip install publicsuffix
+echo "[+] Installing Python Packages 7/9"
 #pip install mitmproxy
 pip install pyinotify
+echo "[+] Installing Python Packages 8/9"
 pip install netifaces
+echo "[+] Installing Python Packages 9/9"
 pip install dnslib
 
 #Install SP sslstrip
+echo "[+] Installing SSLStrip"
 cp -r ./setup/sslstripSnoopy/ /usr/share/
 ln -s /usr/share/sslstripSnoopy/sslstrip.py /usr/bin/sslstrip_snoopy
 
@@ -70,7 +81,7 @@ echo "[+] Installing patched version of scapy..."
 pip install ./setup/scapy-latest-snoopy_patch.tar.gz
 
 # Only run this on your client, not server:
-read -r -p  "[ ] Do you want to download, compile, and install aircrack? [y/n] " response
+read -r -p  "[ ] Do you want to download, compile, and install aircrack? (Do NOT install on Server) [Y/n] " response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
 then
     sudo apt-get install libssl1.0-dev
