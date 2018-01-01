@@ -93,7 +93,7 @@ sudo apt-get -y install libnl-3-dev
 echo "[+] Installing dependencies ..."
 sudo apt-get -y install libnl-genl-3-dev
 sudo apt-get -y install libssl-dev
-sduo apt-get -y install ethtool
+sudo apt-get -y install ethtool
 
     wget http://download.aircrack-ng.org/aircrack-ng-1.2-beta1.tar.gz
     tar xzf aircrack-ng-1.2-beta1.tar.gz
