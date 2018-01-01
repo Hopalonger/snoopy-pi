@@ -30,7 +30,7 @@ echo "[+] Installing sakis3g..."
 cp ./includes/sakis3g /usr/local/bin
 
 echo "[+] Updating repository..."
-apt-get update
+apt-get -y update
 
 # Packages
 echo "[+] Installing required packages..."
@@ -72,7 +72,7 @@ echo "[+] Installing pyserial 2.6"
 pip install https://pypi.python.org/packages/source/p/pyserial/pyserial-2.6.tar.gz
 
 echo "[+] Downloading pylibpcap..."
-sudo apt-get install python-libpcap
+sudo apt-get -y install python-libpcap
 
 echo "[+] Downloading dpkt..."
 pip install dpkt
@@ -86,17 +86,21 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
 then
     
     echo "[+] Downloading aircrack-ng..."
+    sudo apt-get -y install libssl1.0-dev
  sudo apt-get -y install libnl1
 sudo apt-get -y install libnl-dev
 sudo apt-get -y install libnl-3-dev
+echo "[+] Installing dependencies ..."
 sudo apt-get -y install libnl-genl-3-dev
 sudo apt-get -y install libssl-dev
+sduo apt-get -y install ethtool
+
     wget http://download.aircrack-ng.org/aircrack-ng-1.2-beta1.tar.gz
     tar xzf aircrack-ng-1.2-beta1.tar.gz
     cd aircrack-ng-1.2-beta1
-    make
+    sudo make
     echo "[-] Installing aircrack-ng"
-    make install
+    sudo make install
     cd ..
    rm -rf aircrack-ng-1.2-beta1*
 fi
