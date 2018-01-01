@@ -15,9 +15,9 @@ apt-get install ntpdate --force-yes --yes
 if [ -f /etc/init.d/ntp ]; then
 	/etc/init.d/ntp stop
  
-	# Needed for Kali Linux build on Raspberry Pi
-sudo apt-get install ntp
-	/etc/init.d/ntp stop
+	## Needed for Kali Linux build on Raspberry Pi
+# apt-get install ntp
+	#/etc/init.d/ntp stop
   
 echo "[+] Setting time with ntp"
 ntpdate ntp.ubuntu.com 
