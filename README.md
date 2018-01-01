@@ -25,7 +25,7 @@ Strapped for time? Try this:
 
 **To install and setup Snoopy:**
 
-    bash install.sh
+    sudo bash install.sh
 
 **To save data from the wireless, sysinfo, and heartbeat plugins locally:**
 
@@ -102,6 +102,8 @@ root@kali:~# snoopy --list (shorthand -i)
 This command lists all available plugins and the parameters required by each plugin to function correctly. To get more verbose information about each plugin, use '-ii' or '-iii'. To get information about one specific plugin use '-i -m <pluginName>'.
 
 Plugins can be specified with the --plugin (or shorthand -m) option. Numerous plugins can be specified, and will be started in the order entered. Each plugin will be given 60 seconds to indicate its ready state, after which it times out and the next plugin will be initiated. This can be useful if subsequent plugins depend on actions of prior ones.
+
+It is always recommened to run the commands as a admin by adding "sudo" to the front of each snoopy command. This allows for more acccess more thing that are capable of happening and better use of hardware.
    
 Each plugin can take numerous parameters (as indicated in the --list output) in the form of comma separated key value pairs. Below we use the 'example' plugin, which simply generates random numbers.
    
