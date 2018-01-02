@@ -86,14 +86,17 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
 then
     
     echo "[+] Downloading aircrack-ng..."
-    sudo apt-get -y install libssl1.0-dev
- sudo apt-get -y install libnl1
+sudo apt-get -y install libssl1.0-dev
+sudo apt-get -y install libnl1
 sudo apt-get -y install libnl-dev
 sudo apt-get -y install libnl-3-dev
 echo "[+] Installing dependencies ..."
 sudo apt-get -y install libnl-genl-3-dev
 sudo apt-get -y install libssl-dev
 sudo apt-get -y install ethtool
+sudo apt-get install libssl1.0-dev
+apt-get -y install iw
+sudo apt-get install sqlite
 
     wget http://download.aircrack-ng.org/aircrack-ng-1.2-beta1.tar.gz
     tar xzf aircrack-ng-1.2-beta1.tar.gz
