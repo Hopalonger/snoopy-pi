@@ -83,14 +83,14 @@ pip install ./setup/scapy-latest-snoopy_patch.tar.gz
 
     echo "[+] Installing dependencies 1/2"
     
-    sudo apt-get -y install libssl1.0-dev
+ sudo apt-get -y install libssl1.0-dev
  sudo apt-get -y install libnl1
 sudo apt-get -y install libnl-dev
 sudo apt-get -y install libnl-3-dev
 echo "[+] Installing dependencies 2/2"
 sudo apt-get -y install libnl-genl-3-dev
 sudo apt-get -y install libssl-dev
-sduo apt-get -y install ethtool
+sudo apt-get -y install ethtool
 
 echo "[+] Downloading aircrack-ng..."
     wget http://download.aircrack-ng.org/aircrack-ng-1.2-beta1.tar.gz
