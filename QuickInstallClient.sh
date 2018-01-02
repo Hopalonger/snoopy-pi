@@ -14,12 +14,11 @@ apt-get install ntpdate --force-yes --yes
 #if ps aux | grep ntp | grep -qv grep; then 
 if [ -f /etc/init.d/ntp ]; then
 	/etc/init.d/ntp stop
-else
- 
-	## Needed for Kali Linux build on Raspberry Pi
-apt-get install ntp
+else 
+	# Needed for Kali Linux build on Raspberry Pi
+	apt-get install ntp
 	/etc/init.d/ntp stop
-  fi
+fi
 echo "[+] Setting time with ntp"
 ntpdate ntp.ubuntu.com 
 /etc/init.d/ntp start
@@ -81,28 +80,33 @@ pip install dpkt
 echo "[+] Installing patched version of scapy..."
 pip install ./setup/scapy-latest-snoopy_patch.tar.gz
 
-    echo "[+] Installing dependencies 1/2"
+# Only run this on your client, not server:
+
     
- sudo apt-get -y install libssl1.0-dev
- sudo apt-get -y install libnl1
+    echo "[+] Downloading aircrack-ng..."
+sudo apt-get -y install libssl1.0-dev
+sudo apt-get -y install libnl1
 sudo apt-get -y install libnl-dev
 sudo apt-get -y install libnl-3-dev
-echo "[+] Installing dependencies 2/2"
+echo "[+] Installing dependencies ..."
 sudo apt-get -y install libnl-genl-3-dev
 sudo apt-get -y install libssl-dev
 sudo apt-get -y install ethtool
+sudo apt-get -y install libssl1.0-dev
+sudo apt-get -y install iw
+sudo apt-get -y install sqlite
 
-echo "[+] Downloading aircrack-ng..."
     wget http://download.aircrack-ng.org/aircrack-ng-1.2-beta1.tar.gz
     tar xzf aircrack-ng-1.2-beta1.tar.gz
     cd aircrack-ng-1.2-beta1
-    
-  echo "[+] Installing Aircrack-ng 1/2"
     sudo make
-    echo "[-] Installing Aircrack-ng 2/2"
+    echo "[-] Installing aircrack-ng"
     sudo make install
     cd ..
    rm -rf aircrack-ng-1.2-beta1*
+    sudo airodump-ng-oui-update
+
+
 
 echo "[+] Creating symlinks to this folder for snoopy.py."
 
