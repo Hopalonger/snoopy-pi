@@ -16,7 +16,7 @@ if [ -f /etc/init.d/ntp ]; then
 	/etc/init.d/ntp stop
 else 
 	# Needed for Kali Linux build on Raspberry Pi
-	apt-get install ntp
+	apt-get -y install ntp
 	/etc/init.d/ntp stop
 fi
 echo "[+] Setting time with ntp"
