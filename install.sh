@@ -98,16 +98,7 @@ sudo apt-get install libssl1.0-dev
 apt-get -y install iw
 sudo apt-get install sqlite
 
-    wget http://download.aircrack-ng.org/aircrack-ng-1.2-beta1.tar.gz
-    tar xzf aircrack-ng-1.2-beta1.tar.gz
-    cd aircrack-ng-1.2-beta1
-    sudo make
-    echo "[-] Installing aircrack-ng"
-    sudo make install
-    cd ..
-   rm -rf aircrack-ng-1.2-beta1*
-    sudo airodump-ng-oui-update
-
+sudo apt install aircrack-ng
 fi
 
 echo "[+] Creating symlinks to this folder for snoopy.py."
